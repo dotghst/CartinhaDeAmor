@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Para: Isabelle Dias, a pessoa mais importante da minha vida</h1>
+        <h3>Para o amor da minha vida:</h3>
         <h3></h3>
         <ul class="lista_horizontal">
             <li><a href="#"> Algumas fotos nossas</a></li>
@@ -17,20 +17,35 @@
         </ul>
 
     </header>
-    <section>
-        <p>Querida Isabelle,</p>
-
-        <p>Hoje é um dia muito especial, pois é o seu aniversário! É um dia para comemorar você e tudo o que torna você tão incrível. Quero começar dizendo o quão orgulhoso eu sou de você e de tudo o que você já conquistou.</p>
-
-        <p>Desde o dia em que você nasceu, você trouxe tanta alegria e felicidade para nossas vidas. Você é uma menina maravilhosa, cheia de energia e personalidade. Admiro sua determinação e força de vontade, e estou sempre impressionado com a maneira como você enfrenta novos desafios com coragem e confiança.</p>
-
-        <p>No seu aniversário, quero que saiba o quanto é especial para mim. Sua presença em minha vida é um presente inestimável e sou grato por cada momento que passamos juntos. Espero que este dia seja tão maravilhoso quanto você é, e que você seja cercada de amor, carinho e felicidade.</p>
-
-        <p>Lembre-se sempre de que você é amada e apreciada, não apenas hoje, mas todos os dias. Continue sendo a menina incrível que você é e perseguindo seus sonhos com paixão e determinação. Estou ansioso para ver tudo o que o futuro reserva para você e mal posso esperar para estar ao seu lado durante cada momento.</p>
-
-        <p>Feliz aniversário, minha princesa Isabelle! Que seu dia seja cheio de amor, risos e muitos abraços apertados.</p>
-        Com muito amor,<br>Martins.</p>
-        
+    <div id="con_texto">
+    <section id="texto">        
     </section>
+    </div>
+
+    <script>
+        // Obter a seção
+        const section = document.getElementById("texto");
+
+        // Definir o texto a ser exibido letra por letra
+        const textoCompleto = "<p>Querida Isabelle,</p><p>Hoje é um dia muito especial, pois é o seu aniversário! É um dia para comemorar você e tudo o que torna você tão incrível. Quero começar dizendo o quão orgulhoso eu sou de você e de tudo o que você já conquistou.</p><p>Desde o dia em que você nasceu, você trouxe tanta alegria e felicidade para nossas vidas. Você é uma menina maravilhosa, cheia de energia e personalidade. Admiro sua determinação e força de vontade, e estou sempre impressionado com a maneira como você enfrenta novos desafios com coragem e confiança.</p><p>No seu aniversário, quero que saiba o quanto é especial para mim. Sua presença em minha vida é um presente inestimável e sou grato por cada momento que passamos juntos. Espero que este dia seja tão maravilhoso quanto você é, e que você seja cercada de amor, carinho e felicidade.</p><p>Lembre-se sempre de que você é amada e apreciada, não apenas hoje, mas todos os dias. Continue sendo a menina incrível que você é e perseguindo seus sonhos com paixão e determinação. Estou ansioso para ver tudo o que o futuro reserva para você e mal posso esperar para estar ao seu lado durante cada momento.</p><p>Feliz aniversário, minha princesa Isabelle! Que seu dia seja cheio de amor, risos e muitos abraços apertados.</p>Com muito amor,<br>Martins.</p>";
+
+        // Iniciar com uma string vazia para adicionar as letras
+        let textoAtual = "";
+
+        // Definir o intervalo de tempo entre cada letra (em milissegundos)
+        const tempoEntreLetras = 50;
+
+        // Iniciar o intervalo para exibir cada letra
+        let i = 0;
+        setInterval(function() {
+        textoAtual += textoCompleto.charAt(i);
+        section.innerHTML = textoAtual;
+        i++;
+        if (i == textoCompleto.length) {
+            clearInterval(this);
+        }
+        }, tempoEntreLetras);
+
+    </script>
 </body>
 </html>
