@@ -19,12 +19,12 @@ body{
     width: 30%;
     height: 80%;
     background-color: rgb(13, 31, 0);
-    animation: bloom 3s infinite, aumentarBox1 1s;
+    animation: bloom 3s infinite, aumentarBox1 4s;
 }
 #box2{
     width: 80%;
     border: 5px solid rgb(0, 255, 0); 
-    animation: bloom 2s infinite, aumentarBox2 1s;
+    animation: bloom 2s infinite, aumentarBox2 5s;
     
 }
 
@@ -48,7 +48,7 @@ a {
     border: 3px solid rgb(123, 255, 0);
     border-radius: 3px;
     padding: 3px;
-    animation: bloom 3s infinite;
+    animation: bloom 3s infinite, aumentarBox2 5s;
 }
 a:hover{
     color: rgb(0, 0, 0);
@@ -79,12 +79,23 @@ header{
 }
 
 @keyframes aumentarBox1 {
-    from { width: 0; }
-    to { width: 30%; }
+    from { 
+        width: 0; 
+        background-color: rgb(123, 255, 0);
+    }
+    to { 
+        width: 30%;
+    }
 }
   
   @keyframes aumentarBox2 {
-    from { width: 0; }
-    to { width: 100%; }
+    from { 
+        width: 0;
+        background-color: rgb(123, 255, 0);
+    }
+    to { 
+        width: 100%; 
+        background-color: black;
+    }
   }
 
