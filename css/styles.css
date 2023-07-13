@@ -1,7 +1,8 @@
 body{
     padding: 5px;
     background-color: black;
-    color: green;
+    color: rgb(123, 255, 0);
+    font-family: "Consolas", monospace;
 }
 .container{
     padding: 10px;
@@ -17,11 +18,14 @@ body{
 #box1{
     width: 30%;
     height: 80%;
-    background-color: black;
+    background-color: rgb(13, 31, 0);
+    animation: bloom 3s infinite;
 }
 #box2{
     width: 80%;
     border: 5px solid rgb(0, 255, 0); 
+    animation: bloom 2s infinite;
+    
 }
 
 .lista_horizontal{
@@ -44,6 +48,7 @@ a {
     border: 3px solid rgb(123, 255, 0);
     border-radius: 3px;
     padding: 3px;
+    animation: bloom 3s infinite;
 }
 a:hover{
     color: rgb(0, 0, 0);
@@ -56,5 +61,20 @@ a:hover{
 header{
     border: 5px solid rgb(123, 255, 0);
     color: rgb(123, 255, 0);
+}
+
+@keyframes bloom {
+    0% {
+      box-shadow: 0 0 0 0 rgb(123, 255, 0, 0.8); /* Sombra inicial */
+      text-shadow: 0 0 0 rgba(123, 255, 0, 0.8); /* Sombra inicial */
+    }
+    50% {
+      box-shadow: 0 0 20px 10px rgb(123, 255, 0, 0.2); /* Sombra máxima */
+      text-shadow: 0 0 10px rgba(123, 255, 0, 0.2); /* Sombra máxima */
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgb(123, 255, 0, 0); /* Sombra final */
+      text-shadow: 0 0 0 rgba(123, 255, 0, 0); /* Sombra final */
+    }
 }
 
