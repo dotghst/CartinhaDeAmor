@@ -10,16 +10,18 @@
 <body>
     <div class="container">
         <header id="box1">
-            <h3>Para Isabelle Dias Miranda</h3>
+            <h3>Portfófio<br>Martins UwU</h3>
             <h3></h3>
             <ul class="lista_horizontal">
                 <li><a onclick="spamarExec()""> Codigo</a></li>
                 <li><a href=" https://wa.me/+5592994341356">Whatsapp </a></li>
-                <li><a >ArcoIris</a></li>
+                <li><a onclick="limpar()">...</a></li>
             </ul>
         </header>
 
-        <section id="box2" style="background-color: rgb(0, 0, 0);"></section>
+        <section id="box2" class="typing-animation" style="background-color: rgb(0, 0, 0);">
+            Hello, world!
+        </section>
 
     </div>
 
@@ -34,7 +36,7 @@
             let textoCompleto = "";
             x = 0
             for (x; x<28; x++){
-                textoCompleto = textoCompleto + "Eu Te Amo, Isabelle <span style='color: red;'><3</span><br>"
+                textoCompleto = textoCompleto + "<span style='color: red;'><</span>Eu sou um programador python<span style='color: red;'>></span><br>"
             }
 
             let textoAtual = "";
@@ -53,6 +55,11 @@
 
             }, tempoEntreLetras);
         }  
+        function limpar(){
+            var section = document.getElementById("box2")
+            section.innerHTML = ""
+        }
     </script>
+    
 </body>
 </html>
